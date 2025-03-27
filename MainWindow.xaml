@@ -1,0 +1,21 @@
+﻿<Window x:Class="ToriFischerChallengeM8.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Plain Text Editor" Height="450" Width="800">
+    <Grid>
+        <Menu VerticalAlignment="Top">
+            <MenuItem Header="File">
+                <MenuItem Header="New" Click="NewFile"/>
+                <MenuItem Header="Open" Click="OpenFile"/>
+                <MenuItem Header="Save" Click="SaveFile" Name="menuSave" IsEnabled="False"/>
+                <MenuItem Header="Save As" Click="SaveFileAs" Name="menuSaveAs" IsEnabled="False"/>
+                <MenuItem Header="Exit" Click="ExitApplication"/>
+            </MenuItem>
+            <MenuItem Header="Help">
+                <MenuItem Header="About" Click="ShowAbout"/>
+            </MenuItem>
+        </Menu>
+        <TextBox Name="textBox" AcceptsReturn="True" AcceptsTab="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"
+                 HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="40" TextChanged="TextBox_TextChanged"/>
+    </Grid>
+</Window>
